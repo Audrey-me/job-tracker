@@ -1,0 +1,34 @@
+{
+    "ResumeTable": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "job_applied": {"S": "Dyyson - Frontend Developer Role"},
+                    "CV_used": {"S": "https://resume-pdfs-bucket.s3.us-west-2.amazonaws.com/kosiCV.pdf"},
+                    "email_used": {"S": "kosisochukwuakaeze@gmail.com"},
+                    "date_of_application": {"S": "23-07-2023"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "job_applied": {"S": "Lionel - Backend Developer Role"},
+                    "CV_used": {"S": "https://resume-pdfs-bucket.s3.us-west-2.amazonaws.com/janeCV.pdf"},
+                    "email_used": {"S": "jane.doe@example.com"},
+                    "date_of_application": {"S": "22-07-2026"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "job_applied": {"S": "Lionel - Backend Developer Role"},
+                    "CV_used": {"S": "https://resume-pdfs-bucket.s3.us-west-2.amazonaws.com/janeCV.pdf"},
+                    "email_used": {"S": "akaezekosiso@yahoo.com"},
+                    "date_of_application": {"S": "28-07-2022"}
+                }
+            }
+        }
+    ]
+}
