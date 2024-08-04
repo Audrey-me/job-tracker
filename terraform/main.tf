@@ -218,18 +218,6 @@ resource "aws_api_gateway_stage" "resume_api_stage" {
   stage_name    = "prod"
 }
 
-
-output "api_resume_endpoint" {
-  value = "${aws_api_gateway_rest_api.resume_api.execution_arn}/resume"
-}
-
-output "api_resume_list_endpoint" {
-  value = "${aws_api_gateway_rest_api.resume_api.execution_arn}/resume/list"
-}
-
-output "api_resume_person_endpoint" {
-  value = "${aws_api_gateway_rest_api.resume_api.execution_arn}/resume/person"
-}
 # end of creating an api gateway resource
 
 
