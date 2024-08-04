@@ -28,12 +28,6 @@ resource "aws_dynamodb_table" "resume-data-table" {
 }
 # end of creating a dynamodb table
 
-# create an s3 bucket
-resource "aws_s3_bucket" "resume_pdfs" {
-  bucket = "resume-pdfs-bucket"
-}
-# end of creating an s3 bucket
-
 # creates a lambda function
     # this creates a role that the lambda function will assume
 data "aws_iam_policy_document" "assume_role" {
