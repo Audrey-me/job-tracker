@@ -1,42 +1,31 @@
 # Deployment and Testing Guide
 
 ## Introduction
-This guide provides step-by-step instructions to deploy your Terraform configuration, provision AWS services, and test your API endpoints.
+This guide provides instructions to deploy your Terraform configuration and automate deployment using github actions.
 
 ## Prerequisites
 - Git installed on your local machine.
-- Terraform installed on your local machine.
-- AWS CLI installed and configured with necessary credentials.
 
-## Steps to Deploy and Test API Endpoints
 
-### 1. Clone the Repository
-Clone the repository and navigate to the project directory.
-```sh
-git clone <repository_url>
-cd <repository_directory>
-```
+## Steps to Run the Project
+
+### 1. Configure AWS Credentials
+
+Ensure your AWS credentials are set up as GitHub secrets. In your GitHub repository, navigate to Settings > Secrets and variables > Actions and add the following secrets:
+
+- AWS_ACCESS_KEY_ID
+- AWS_SECRET_ACCESS_KEY
 
 ### 2. Install Terraform
 Follow the official Terraform installation instructions for your operating system: Install Terraform[https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli]
 
-### 3. Configure AWS Credentials
-Ensure your AWS credentials are configured to interact with AWS services. You can configure AWS credentials using the AWS CLI:
-```bash
-aws configure
-```
-### 4. Initialize Terraform Configuration
-```bash
-terraform init
-```
+### 3. Push Code to Trigger Deployment
+Any push to the main branch will automatically trigger the GitHub Actions workflow to deploy your infrastructure and Lambda functions.
 
-### 5. Plan and Apply Terraform Configuration
-```bash
-terraform plan
-terraform apply
-```
+### 4. Check GitHub Actions Workflow
+Verify the deployment process in the Actions tab of your GitHub repository. Ensure that all steps complete successfully.
 
-### 6. Test API Endpoints
+### 5. Test API Endpoints
 You can test your API endpoints using a browser, curl, or Postman.
 - Using curl for POST 
 ```bash
