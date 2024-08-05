@@ -6,6 +6,14 @@ on:
   pull_request:
     branches: 
       - main
+      
+  workflow_dispatch:
+      inputs:
+          destroy:
+            description: 'Set to true to destroy the infrastructure'
+            required: true
+            default: 'false'
+                
 
 jobs:
   build:
@@ -54,4 +62,5 @@ jobs:
           cd terraform
           terraform apply -auto-approve tfplan
 
+      
 
